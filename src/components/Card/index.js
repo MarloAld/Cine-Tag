@@ -8,7 +8,6 @@ function Card({ id, titulo, capa }) {
     const {favorito, adicionarFavorito} = useFavoritoContext()
     const isFavorite = favorito.some((fav) => fav.id === id)
     const icone = !isFavorite ? iconeFavoritar : iconeDesfavoritar
-
     return (
         <div className={styles.container}>
             <Link className={styles.link} to={`/${id}`}>
